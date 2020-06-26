@@ -1,13 +1,267 @@
 {
-    "Metadata": {
-        "DateCreated": "Sun Sep 25 23:19:55 2011", 
-        "Tool": "convertdemog.py", 
-        "Author": "jsteinkraus", 
-        "IdReference": "Gridded world grump2.5arcmin", 
-        "NodeCount": 1,
-		"Resolution": 150
-    }, 
+   "Metadata": {
+      "Author": "cwiswell",
+      "DateCreated": "2020-06-26 11:54:00.000000",
+      "IdReference": "Gridded world grump2.5arcmin",
+      "NodeCount": 1,
+      "Resolution": 150,
+      "Tool": "dtk-tools"
+   },
+    "Defaults_OLD": {
+    	"IndividualProperties": [
+		{
+		"Property": "Accessibility",
+		"Values": [ "Easy", "Hard"],
+		"Initial_Distribution": [ 0.7, 0.3 ],
+		"Transitions": [],
+        "TransmissionMatrix": {
+            "environmental": {
+                "Matrix": [
+                        [1, 1],
+                        [1, 1]
+                    ]
+                }
+            }
+		},
+		{
+		"Property": "Risk",
+		"Values": [ "Low", "High"],
+		"Initial_Distribution": [ 0.6, 0.4 ],
+		"Transitions": [],
+        "TransmissionMatrix": {
+            "contact": {
+                "Matrix": [
+                        [1, 1],
+                        [1, 1]
+                    ]
+                }
+            }
+		}
+    	]
+    },
     "Defaults": {
+        "IndividualProperties": [
+            {
+                "Initial_Distribution": [
+                    0.2,
+                    0.1,
+                    0.15,
+                    0.15,
+                    0.4,
+                    0,
+                    0,
+                    0
+                ],
+                "Property": "Geographic",
+                "Transitions": [],
+                "TransmissionMatrix": {
+                    "contact": {
+                        "Matrix": [
+                            [
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0
+                            ],
+                            [
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0
+                            ],
+                            [
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0
+                            ],
+                            [
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0
+                            ],
+                            [
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0
+                            ],
+                            [
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0
+                            ],
+                            [
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0
+                            ],
+                            [
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0
+                            ]
+                        ]
+                    }
+                },
+                "Values": [
+                    "Community",
+                    "ES",
+                    "JH",
+                    "HS",
+                    "Work",
+                    "ES_intervention",
+                    "JH_intervention",
+                    "HS_intervention"
+                ]
+            },
+            {
+                "Initial_Distribution": [
+                    0.2,
+                    0.1,
+                    0.15,
+                    0.15,
+                    0.4,
+                    0,
+                    0,
+                    0
+                ],
+                "Property": "Household",
+                "Transitions": [],
+                "TransmissionMatrix": {
+                    "environmental": {
+                        "Matrix": [
+                            [
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0
+                            ],
+                            [
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0
+                            ],
+                            [
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0
+                            ],
+                            [
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0
+                            ],
+                            [
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0
+                            ],
+                            [
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0
+                            ],
+                            [
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0
+                            ],
+                            [
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0
+                            ]
+                        ]
+                    }
+                },
+                "Values": [
+                    "Community",
+                    "ES",
+                    "JH",
+                    "HS",
+                    "Work",
+                    "ES_intervention",
+                    "JH_intervention",
+                    "HS_intervention"
+                ]
+            }
+        ]
     },
     "Nodes": [
         {

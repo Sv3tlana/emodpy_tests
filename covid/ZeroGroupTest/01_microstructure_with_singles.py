@@ -49,15 +49,15 @@ with open (simconfig_end_fullpath, 'w') as outfile:
     json.dump(config, outfile, indent=4, sort_keys=True)
 
 # TODO: uncomment these 10 lines when https://github.com/InstituteforDiseaseModeling/emodpy-covid/issues/15 is resolved
-# from emodpy_covid.microstructure import change_ser_pop
-#
-# change_ser_pop.change_ser_pop(
-#     path=statefile_start_fullpath,
-#     input_demog=demographics_start_fullpath,
-#     output_demog=demographics_end_fullpath,
-#     save_file_path=statefile_end_fullpath,
-#     use_singles_node=True
-# )
+from emodpy_covid.microstructure import change_ser_pop
+
+change_ser_pop.change_ser_pop(
+    path=statefile_start_fullpath,
+    input_demog=demographics_start_fullpath,
+    output_demog=demographics_end_fullpath,
+    save_file_path=statefile_end_fullpath,
+    use_singles_node=True
+)
 
 if __name__ == "__main__":
     platform = Platform('COMPS2')
