@@ -21,7 +21,7 @@
             "../demographics.json",
             "../demographics_1000_overlay.json"
         ],
-        "Disable_IP_Whitelist": 0,
+        "Disable_IP_Whitelist": 1,
         "Enable_Aging": 1,
         "Enable_Birth": 0,
         "Enable_Default_Reporting": 1,

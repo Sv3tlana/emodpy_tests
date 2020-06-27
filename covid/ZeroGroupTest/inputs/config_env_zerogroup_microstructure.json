@@ -13,12 +13,14 @@
         "Campaign_Filename": "campaign.json",
         "Climate_Model": "CLIMATE_OFF",
         "Config_Name": "Environmental serialization 04 manipulate population",
+        "Contact_Normalization": "GROUP",
         "Custom_Reports_Filename": "NoCustomReports",
         "Death_Rate_Dependence": "NONDISEASE_MORTALITY_BY_AGE_AND_GENDER",
         "Default_Geography_Initial_Node_Population": 1000,
         "Default_Geography_Torus_Size": 10,
         "Demographics_Filenames": [
-            "demographics-microstructure.json"
+            "../demographics.json",
+            "../demographics_1000_overlay.json"
         ],
         "Disable_IP_Whitelist": 1,
         "Enable_Aging": 1,
@@ -121,8 +123,6 @@
         ],
         "Serialization_Type": "TIMESTEP",
         "Serialized_Population_Filenames": [
-            "demographics.json",
-            "demographics_1000_overlay.json",
             "state-microstructure-zerogroup.dtk"
         ],
         "Serialized_Population_Path": "Assets",
