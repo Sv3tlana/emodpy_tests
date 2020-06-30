@@ -11,7 +11,7 @@ import emodpy_covid.microstructure.change_ser_pop as change_serialized_populatio
 
 CANNED_DEMOGRAPHICS_FILENAME = "demographics.json"
 CANNED_STATEFILE_FILENAME = "state-00000.dtk"
-CANNED_CONFIG_FILENAME = "covid_config_stage1.json"
+COVID_CONFIG_FILENAME = "covid_config.json"
 
 from globals_zero_group import ERADICATION_PATH, SIM_CONFIG_PATH, SPOPS_ROOT
 
@@ -24,9 +24,9 @@ INPUTS_CANNED_STATEFILE = os.path.join(
     CANNED_STATEFILE_FILENAME
 )
 
-INPUTS_CANNED_CONFIGFILE = os.path.join(
+INPUTS_COVID_CONFIGFILE = os.path.join(
     SIM_CONFIG_PATH,
-    CANNED_CONFIG_FILENAME
+    COVID_CONFIG_FILENAME
 )
 try:
     random_sim_id = os.listdir(SPOPS_ROOT)[-2]  # -1 will be README.txt
@@ -91,19 +91,20 @@ if __name__ == "__main__":
     if not os.path.isfile(INPUTS_CANNED_DEMOGRAPHICS):
         raise EnvironmentError("You need to run microstructure_00 first")
     if not os.path.isfile(INPUTS_CANNED_STATEFILE):
-        if os.path.isfile(CANNED_STATEFILE_FILENAME):
-            shutil.move(CANNED_STATEFILE_FILENAME, INPUTS_CANNED_STATEFILE)
+        found_statefile = os.path.join(SPOP_FOLDER, CANNED_STATEFILE_FILENAME)
+        if os.path.isfile(found_statefile):
+            shutil.move(found_statefile, INPUTS_CANNED_STATEFILE)
         else:
             raise EnvironmentError("Couldn't find statefile either in inputs or in local folder")
     add_microstructure_to_statefile_and_demographics(
         starting_statefile_fullpath=INPUTS_CANNED_STATEFILE,
         starting_demographics_fullpath=INPUTS_CANNED_DEMOGRAPHICS
     )
-    config_fullpath = create_config_file(base_config_file=INPUTS_CANNED_CONFIGFILE)
+    config_fullpath = create_config_file(base_config_file=INPUTS_COVID_CONFIGFILE)
     run_microstructure_sim(config_file_fullpath=config_fullpath)
 
     run_microstructure_sim(
-        config_filepath=config_filepath,
+        config_filepath=config_fullpath,
         demographics_filepath=INPUTS_CANNED_DEMOGRAPHICS
     )
     pass

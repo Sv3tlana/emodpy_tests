@@ -14,5 +14,7 @@ if not os.path.isfile(ERADICATION_PATH):
     ERADICATION_PATH_BAMBOO = download_latest_bamboo(
         plan=EradicationBambooBuilds.BETA_COVID
     )
-    shutil.copyfile(ERADICATION_PATH_BAMBOO,
-                    ERADICATION_PATH)
+    shutil.move(ERADICATION_PATH_BAMBOO,
+                ERADICATION_PATH)
+
+

@@ -18,6 +18,7 @@ import emodpy_covid.demog as demog
 
 CANNED_CONFIG_FILENAME = "covid_config_stage1.json"
 CANNED_DEMOGRAPHICS_FILENAME = "demographics.json"
+COVID_CONFIG_FILENAME = "covid_config.json"
 
 def create_canned_config():
     if os.path.isfile("schema.json"):
@@ -27,6 +28,8 @@ def create_canned_config():
     destination_filepath = os.path.join(SIM_CONFIG_PATH, CANNED_CONFIG_FILENAME)
     shutil.move(CANNED_CONFIG_FILENAME,
                 destination_filepath)
+    simulation_destination_filepath = os.path.join(SIM_CONFIG_PATH, COVID_CONFIG_FILENAME)
+    shutil.move(COVID_CONFIG_FILENAME, simulation_destination_filepath)
     return destination_filepath
 
 def create_canned_demog():
