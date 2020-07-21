@@ -24,20 +24,25 @@ def create_canned_config():
     if os.path.isfile("schema.json"):
         os.unlink("schema.json")
 
-    config.app("Eradication-bamboo.exe")
+    config.app("Eradication-bamboo.exe") # Calls emodpy_covid to make some config files
+
     destination_filepath = os.path.join(SIM_CONFIG_PATH, CANNED_CONFIG_FILENAME)
     shutil.move(CANNED_CONFIG_FILENAME,
                 destination_filepath)
+
     simulation_destination_filepath = os.path.join(SIM_CONFIG_PATH, COVID_CONFIG_FILENAME)
     shutil.move(COVID_CONFIG_FILENAME, simulation_destination_filepath)
+
     return destination_filepath
 
+
 def create_canned_demog():
-    demog.get_demog()
+    demog.get_demog() # Calls emodpy_covid to get a demographics file
 
     destination_filepath = os.path.join(SIM_CONFIG_PATH, CANNED_DEMOGRAPHICS_FILENAME)
     shutil.move(CANNED_DEMOGRAPHICS_FILENAME,
                 destination_filepath)
+
     return destination_filepath
 
 

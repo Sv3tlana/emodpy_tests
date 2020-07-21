@@ -29,7 +29,7 @@ INPUTS_COVID_CONFIGFILE = os.path.join(
     COVID_CONFIG_FILENAME
 )
 try:
-    random_sim_id = os.listdir(SPOPS_ROOT)[-2]  # -1 will be README.txt
+    random_sim_id = os.listdir(SPOPS_ROOT)[-2]  # -1 will be README.md
     SPOP_FOLDER = os.path.join(SPOPS_ROOT, random_sim_id)
 except Exception:
     raise FileNotFoundError(f"Couldn't find a folder under {SPOPS_ROOT},"
@@ -78,6 +78,9 @@ def run_microstructure_sim(config_file_fullpath):
 
     statefile_asset = Asset(absolute_path=FINAL_STATEFILE_FULLNAME)
     zerogroup_test_task.common_assets.add_asset(statefile_asset)
+
+    CONVERT_PYTHON_FULLPATH = os.path.join("inputs", "sqlite_to_csv.py")
+    convert_sqlite_db_asset = Asset(absolute_path=CONVERT_PYTHON_FULLPATH)
 
     zerogroup_test_experiment = Experiment.from_task(
         task=zerogroup_test_task,
