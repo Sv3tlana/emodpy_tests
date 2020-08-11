@@ -1,0 +1,319 @@
+{
+    "Defaults": {
+        "IndividualProperties": [
+            {
+                "Initial_Distribution": [
+                    0.2,
+                    0.1,
+                    0.15,
+                    0.15,
+                    0.4,
+                    0,
+                    0,
+                    0
+                ],
+                "Property": "Geographic",
+                "Transitions": [],
+                "TransmissionMatrix": {
+                    "contact": {
+                        "Matrix": [
+                            [
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0
+                            ],
+                            [
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0
+                            ],
+                            [
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0
+                            ],
+                            [
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0
+                            ],
+                            [
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0
+                            ],
+                            [
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0
+                            ],
+                            [
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0
+                            ],
+                            [
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0
+                            ]
+                        ]
+                    }
+                },
+                "Values": [
+                    "Community",
+                    "ES",
+                    "JH",
+                    "HS",
+                    "Work",
+                    "ES_intervention",
+                    "JH_intervention",
+                    "HS_intervention"
+                ]
+            },
+            {
+                "Initial_Distribution": [
+                    0.2,
+                    0.1,
+                    0.15,
+                    0.15,
+                    0.4,
+                    0,
+                    0,
+                    0
+                ],
+                "Property": "Household",
+                "Transitions": [],
+                "TransmissionMatrix": {
+                    "environmental": {
+                        "Matrix": [
+                            [
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0
+                            ],
+                            [
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0
+                            ],
+                            [
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0
+                            ],
+                            [
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0
+                            ],
+                            [
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0
+                            ],
+                            [
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0
+                            ],
+                            [
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0
+                            ],
+                            [
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0,
+                                0
+                            ]
+                        ]
+                    }
+                },
+                "Values": [
+                    "Community",
+                    "ES",
+                    "JH",
+                    "HS",
+                    "Work",
+                    "ES_intervention",
+                    "JH_intervention",
+                    "HS_intervention"
+                ]
+            }
+        ]
+    },
+    "Metadata": {
+        "Author": "jbloedow",
+        "DateCreated": "Tue May 12 00:00:00 2020",
+        "IdReference": "SampleContent",
+        "NodeCount": 1,
+        "Resolution": 150,
+        "Tool": "python"
+    },
+    "Nodes": [
+        {
+            "IndividualAttributes": {
+                "AgeDistribution": {
+                    "DistributionValues": [
+                        []
+                    ],
+                    "ResultScaleFactor": 1,
+                    "ResultValues": [
+                        []
+                    ]
+                },
+                "AgeDistribution1": 0.000118,
+                "AgeDistribution2": 0,
+                "AgeDistributionFlag": 3,
+                "MigrationHeterogeneityDistribution1": 1,
+                "MigrationHeterogeneityDistribution2": 0,
+                "MigrationHeterogeneityDistributionFlag": 0,
+                "MortalityDistribution": {
+                    "AxisNames": [
+                        "gender",
+                        "age"
+                    ],
+                    "AxisScaleFactors": [
+                        1,
+                        365
+                    ],
+                    "AxisUnits": [
+                        "male=0,female=1",
+                        "years"
+                    ],
+                    "NumDistributionAxes": 2,
+                    "NumPopulationGroups": [
+                        2,
+                        3
+                    ],
+                    "PopulationGroups": [
+                        [
+                            0,
+                            1
+                        ],
+                        [
+                            0,
+                            100,
+                            2000
+                        ]
+                    ],
+                    "ResultScaleFactor": 2.7397260273972604e-06,
+                    "ResultUnits": "annual deaths per 1000 individuals",
+                    "ResultValues": [
+                        [
+                            0,
+                            20.0000035,
+                            400.00007
+                        ],
+                        [
+                            0,
+                            20.0000035,
+                            400.00007
+                        ]
+                    ]
+                },
+                "PrevalenceDistribution1": 0.0,
+                "PrevalenceDistribution2": 0.0,
+                "PrevalenceDistributionFlag": 0,
+                "RiskDistribution1": 1,
+                "RiskDistribution2": 0,
+                "RiskDistributionFlag": 0,
+                "SusceptibilityDistribution1": 1,
+                "SusceptibilityDistribution2": 0,
+                "SusceptibilityDistributionFlag": 0
+            },
+            "NodeAttributes": {
+                "Airport": 0,
+                "Altitude": 0,
+                "BirthRate": 0.0001,
+                "InitialPopulation": 1000,
+                "Latitude": 0,
+                "Longitude": 0,
+                "Region": 1,
+                "Seaport": 0
+            },
+            "NodeID": 340461476
+        }
+    ]
+}
