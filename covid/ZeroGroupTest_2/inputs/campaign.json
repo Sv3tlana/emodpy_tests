@@ -1,52 +1,53 @@
 {
-	"Campaign_Name": "Initial Seeding",
-	"Events": [
-		{
-			"Event_Coordinator_Config": {
-				"Demographic_Coverage": 0.5,
-				"Intervention_Config": {
-					"Outbreak_Source": "PrevalenceIncrease",
-					"class": "OutbreakIndividual"
-				},
-				"Target_Demographic": "Everyone",
-				"Property_Restrictions_Within_Node": [
-					{
-						"Restrictions": [
-							"Household:0"
-						]
-					}
-				],
-				"class": "StandardInterventionDistributionEventCoordinator"
-			},
-			"Event_Name": "Outbreak",
-			"Nodeset_Config": {
-				"class": "NodeSetAll"
-			},
-			"Start_Day":3,
-			"class": "CampaignEvent"
-		},
-		{
-			"Event_Coordinator_Config": {
-				"Demographic_Coverage": 1,
-				"Intervention_Config": {
-					"class": "RouteAwareSimpleVaccine",
+    "Campaign_Name": "Initial Seeding",
+    "Events": [
+        {
+            "Event_Coordinator_Config": {
+                "Demographic_Coverage": 0.5,
+                "Intervention_Config": {
+                    "Outbreak_Source": "PrevalenceIncrease",
+                    "class": "OutbreakIndividual"
+                },
+                "Target_Demographic": "Everyone",
+                "Property_Restrictions_Within_Node": [
+                    {
+                        "Restrictions": [
+                            "Household:0"
+                        ]
+                    }
+                ],
+                "class": "StandardInterventionDistributionEventCoordinator"
+            },
+            "Event_Name": "Outbreak",
+            "Nodeset_Config": {
+                "class": "NodeSetAll"
+            },
+            "Start_Day":3,
+            "class": "CampaignEvent"
+        },
+        {
+            "Event_Coordinator_Config": {
+                "Demographic_Coverage": 1,
+                "Intervention_Config": {
+                    "class": "RouteAwareSimpleVaccine",
                     "Vaccine_Type":"Generic",
-					"Vaccine_Route": "TRANSMISSIONROUTE_CONTACT",
-					"Waning_Config": {
-						"class": "WaningEffectConstant",
-						"Initial_Effect": 1
-					}
-				},
-				"Target_Demographic": "Everyone",
-				"class": "StandardInterventionDistributionEventCoordinator"
-			},
-			"Event_Name": "Outbreak",
-			"Nodeset_Config": {
-				"class": "NodeSetAll"
-			},
-			"Start_Day": 1,
-			"class": "CampaignEvent"
-		}
-	],
-	"Use_Defaults": 1
+                    "Vaccine_Route": "TRANSMISSIONROUTE_CONTACT",
+                    "Waning_Config": {
+                        "class": "WaningEffectConstant",
+                        "Initial_Effect": 1
+                    }
+                },
+                "Target_Demographic": "Everyone",
+                "class": "StandardInterventionDistributionEventCoordinator"
+            },
+            "Event_Name": "Outbreak",
+            "Nodeset_Config": {
+                "class": "NodeSetAll"
+            },
+            "Start_Day": 1,
+            "class": "CampaignEvent"
+        }
+    ],
+    "Use_Defaults": 1
 }
+
